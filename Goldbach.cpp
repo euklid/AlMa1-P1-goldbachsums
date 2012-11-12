@@ -58,6 +58,7 @@ void goldbach(int a, int b, std::vector<bool>& p) {
 				locprime_pairs.push_back(i);
 				locprime_pairs.push_back(c-i);
 				++sums;
+				if(sums>=sums_min) break; // at this point we know that we can't get a better solution. stop useless calculation
 			}
 		}
 		if (sums < sums_min) {
